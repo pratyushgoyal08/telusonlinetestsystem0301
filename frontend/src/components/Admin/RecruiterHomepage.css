@@ -1,0 +1,99 @@
+/* General styles for the main layout */
+.home-container {
+  display: flex;
+  flex-direction: column; /* Default for smaller screens */
+  height: 100vh;
+  background-color: #f9f9fc;
+}
+
+/* sidebarRecruiter styling */
+/* .sidebarRecruiter {
+  width: 100%; 
+  background-color: #502c6c;
+  color: #ffffff;
+  padding: 1rem;
+  border-right: none; 
+  border-bottom: 2px solid #3e2159; 
+} */
+.sidebarRecruiter{
+  color: #fff;
+    background-color: #502c6c;
+    border-bottom: 2px solid #3e2159;
+    border-right: none;
+    padding: 1rem;
+    width: 260px;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    height: 100%;
+    z-index: 100;
+    box-shadow: 0 0 1px var(--grey-color-light);
+    transition: all 0.5s ease;
+}
+/* sidebarRecruiter list styles */
+.sidebarRecruiter ul {
+  padding: 0px;
+  list-style-type: none;
+  width: 100%;
+}
+ul.sub-menu li:hover {
+  background: #8557b0;
+  width: 100%;
+}
+.sidebarRecruiter li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.sidebarRecruiter li:hover,
+.sidebarRecruiter li.active {
+  background-color: #3e2159;
+}
+
+/* Main content area */
+.main-content {
+  color: #502c6c;
+  background-color: #f1f3fa;
+  flex-grow: 1;
+  padding: 1rem;
+  margin-left: 260px;
+  margin-top: 70px;
+}
+
+/* Remove unnecessary padding for a specific class */
+.MuiBox-root.css-1wcaknn {
+  padding: 0 !important;
+}
+
+.questab{
+  display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+}
+.arrowimg{
+  width:20px
+}
+
+ul.sub-menu li {
+  margin: 0;
+  padding: 5px;
+  max-width: 100%;
+  margin-bottom: 5px;
+  margin-top: 5px
+}
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+  .home-container {
+      flex-direction: row; /* Switch to row layout for medium and larger screens */
+  }
+
+  .sidebarRecruiter {
+      width: 252px; /* Fixed width for larger screens */
+      border-right: 2px solid #3e2159;
+      border-bottom: none; /* Remove bottom border */
+  }
+}
